@@ -1,6 +1,6 @@
-package com.ra.security.jwt;
+package com.ra.config.security.jwt;
 
-import com.ra.security.UserPrinciple;
+import com.ra.config.security.UserPrinciple;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.slf4j.Logger;

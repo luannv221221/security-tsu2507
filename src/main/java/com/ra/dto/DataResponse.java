@@ -1,4 +1,4 @@
-package com.ra.model.dto;
+package com.ra.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

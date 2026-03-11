@@ -1,9 +1,9 @@
 package com.ra.controller;
 
-import com.ra.model.dto.DataResponse;
-import com.ra.model.dto.user.LoginRequestDTO;
-import com.ra.model.dto.user.LoginResponseDTO;
-import com.ra.model.dto.user.RegisterRequestDTO;
+import com.ra.dto.DataResponse;
+import com.ra.dto.user.LoginRequestDTO;
+import com.ra.dto.user.LoginResponseDTO;
+import com.ra.dto.user.RegisterRequestDTO;
 import com.ra.service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

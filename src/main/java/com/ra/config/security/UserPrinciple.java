@@ -1,6 +1,6 @@
-package com.ra.security;
+package com.ra.config.security;
 
-import com.ra.model.entity.User;
+import com.ra.entity.User;
 import lombok.*;
 import org.jspecify.annotations.Nullable;
 import org.springframework.security.core.GrantedAuthority;

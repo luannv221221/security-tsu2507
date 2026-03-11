@@ -1,4 +1,4 @@
-package com.ra.model.dto.user;
+package com.ra.dto.user;
 
 import lombok.*;
 
@@ -7,9 +7,7 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
-public class RegisterRequestDTO {
+public class LoginRequestDTO {
     private String username;
-    private String fullName;
     private String password;
-
 }

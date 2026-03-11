@@ -1,6 +1,6 @@
-package com.ra.model.dto.user;
+package com.ra.dto.user;
 
-import com.ra.model.entity.Role;
+import com.ra.entity.Role;
 import lombok.*;
 
 import java.util.Set;

@@ -1,4 +1,4 @@
-package com.ra.security.jwt;
+package com.ra.config.security.jwt;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

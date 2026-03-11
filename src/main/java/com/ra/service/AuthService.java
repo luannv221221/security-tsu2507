@@ -1,9 +1,9 @@
 package com.ra.service;
 
-import com.ra.model.dto.DataResponse;
-import com.ra.model.dto.user.LoginRequestDTO;
-import com.ra.model.dto.user.LoginResponseDTO;
-import com.ra.model.dto.user.RegisterRequestDTO;
+import com.ra.dto.DataResponse;
+import com.ra.dto.user.LoginRequestDTO;
+import com.ra.dto.user.LoginResponseDTO;
+import com.ra.dto.user.RegisterRequestDTO;
 
 public interface AuthService {
     DataResponse register(RegisterRequestDTO registerRequestDTO);

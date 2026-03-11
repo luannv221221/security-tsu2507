@@ -1,4 +1,4 @@
-package com.ra.model.entity;
+package com.ra.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

@@ -1,6 +1,6 @@
-package com.ra.security;
+package com.ra.config.security;
 
-import com.ra.model.entity.User;
+import com.ra.entity.User;
 import com.ra.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

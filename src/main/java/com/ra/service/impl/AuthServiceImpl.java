@@ -1,15 +1,16 @@
 package com.ra.service.impl;
 
-import com.ra.model.dto.DataResponse;
-import com.ra.model.dto.user.LoginRequestDTO;
-import com.ra.model.dto.user.LoginResponseDTO;
-import com.ra.model.dto.user.RegisterRequestDTO;
-import com.ra.model.entity.Role;
-import com.ra.model.entity.User;
+import com.ra.dto.DataResponse;
+import com.ra.dto.user.LoginRequestDTO;
+import com.ra.dto.user.LoginResponseDTO;
+import com.ra.dto.user.RegisterRequestDTO;
+import com.ra.entity.Role;
+import com.ra.entity.User;
+import com.ra.mapper.user.UserMapper;
 import com.ra.repository.RoleRepository;
 import com.ra.repository.UserRepository;
-import com.ra.security.UserPrinciple;
-import com.ra.security.jwt.JwtProvider;
+import com.ra.config.security.UserPrinciple;
+import com.ra.config.security.jwt.JwtProvider;
 import com.ra.service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -31,21 +32,11 @@ public class AuthServiceImpl implements AuthService {
     private AuthenticationProvider authenticationProvider;
     @Autowired
     private JwtProvider jwtProvider;
+
     @Override
     public DataResponse register(RegisterRequestDTO registerRequestDTO) {
-        // gan quyen hien tai cho tai khoan dang ky la CUSTOMER
-        Set<Role> roles = new HashSet<>();
-        Role role = roleRepository.getRolesByRoleName("CUSTOMER");
-        roles.add(role);
-        // Convert DTO -> ENTITY
-        User user = User.builder()
-                .username(registerRequestDTO.getUsername())
-                .password(new BCryptPasswordEncoder().encode(registerRequestDTO.getPassword()))
-                .roles(roles)
-                .fullName(registerRequestDTO.getFullName())
-                .status(true)
-                .build();
-        userRepository.save(user);
+
+        userRepository.save(UserMapper.toEntity(registerRequestDTO));
         return new DataResponse("Registerd Successfully",201);
     }
 
